@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "3f69a3a7-9cfa-d0a4-16ea-7dc7a3bd1386",
+		"name": "test-my.umarkets.com",
+		"description": "Study",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Восстановление пароля с не заполненнымполем \"email\"",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"culture\": \"en\", \"Email\": \" \", \"lang\": null }"
+				},
+				"url": {
+					"raw": "https://test-api.umarkets.com/account/forgot-password?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23forgotPassword ",
+					"protocol": "https",
+					"host": [
+						"test-api",
+						"umarkets",
+						"com"
+					],
+					"path": [
+						"account",
+						"forgot-password"
+					],
+					"query": [
+						{
+							"key": "currentUrl",
+							"value": "https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23forgotPassword "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Восстановление пароля с не зарегистрированным \"email\"",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"culture\": \"en\", \"Email\": \"jp@mail4.online\", \"lang\": null }"
+				},
+				"url": {
+					"raw": "https://test-api.umarkets.com/account/forgot-password?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23forgotPassword ",
+					"protocol": "https",
+					"host": [
+						"test-api",
+						"umarkets",
+						"com"
+					],
+					"path": [
+						"account",
+						"forgot-password"
+					],
+					"query": [
+						{
+							"key": "currentUrl",
+							"value": "https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23forgotPassword "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Восстановление пароля с валидными данными",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"culture\": \"en\", \"Email\": \"jofap@mail4.online\", \"lang\": null }"
+				},
+				"url": {
+					"raw": "https://test-api.umarkets.com/account/forgot-password?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23forgotPassword ",
+					"protocol": "https",
+					"host": [
+						"test-api",
+						"umarkets",
+						"com"
+					],
+					"path": [
+						"account",
+						"forgot-password"
+					],
+					"query": [
+						{
+							"key": "currentUrl",
+							"value": "https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23forgotPassword "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Авторизация зарегистрированного пользователя с не правильно заполненным полем \"email\"",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"email\": \"ofap@mail4.online\", \"password\": \"qwerty123\" }"
+				},
+				"url": {
+					"raw": "https://test-api.umarkets.com/account/logon?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23login ",
+					"protocol": "https",
+					"host": [
+						"test-api",
+						"umarkets",
+						"com"
+					],
+					"path": [
+						"account",
+						"logon"
+					],
+					"query": [
+						{
+							"key": "currentUrl",
+							"value": "https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23login "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Авторизация зарегистрированного пользователя с не правильно заполненным полем \"Password\"",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"email\": \"jofap@mail4.online\", \"password\": \"qwerty23\" }"
+				},
+				"url": {
+					"raw": "https://test-api.umarkets.com/account/logon?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23login ",
+					"protocol": "https",
+					"host": [
+						"test-api",
+						"umarkets",
+						"com"
+					],
+					"path": [
+						"account",
+						"logon"
+					],
+					"query": [
+						{
+							"key": "currentUrl",
+							"value": "https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23login "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Авторизация нового пользователя с валидными данными в поле \"email\", \"Password\" не заполнено",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " { \"email\": \"jofap@mail4.online\", \"password\": \" \" }"
+				},
+				"url": {
+					"raw": "https://test-api.umarkets.com/account/logon?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23login ",
+					"protocol": "https",
+					"host": [
+						"test-api",
+						"umarkets",
+						"com"
+					],
+					"path": [
+						"account",
+						"logon"
+					],
+					"query": [
+						{
+							"key": "currentUrl",
+							"value": "https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23login "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Авторизация нового пользователя с валидными данными в поле  \"Password\", \"email\" не заполнено",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " { \"email\": \" \", \"password\": \"qwerty123\" }"
+				},
+				"url": {
+					"raw": "https://test-api.umarkets.com/account/logon?currentUrl=https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23login ",
+					"protocol": "https",
+					"host": [
+						"test-api",
+						"umarkets",
+						"com"
+					],
+					"path": [
+						"account",
+						"logon"
+					],
+					"query": [
+						{
+							"key": "currentUrl",
+							"value": "https%3A%2F%2Ftest-my.umarkets.com%2F%3Flang%3Den%23login "
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
